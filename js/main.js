@@ -5,7 +5,7 @@ const cardHolder = document.querySelector('.deck')
 
 
 const convertIt = function (e) {
-
+    e.preventDefault();
     // all input data to calculate
 
 
