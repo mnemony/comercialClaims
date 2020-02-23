@@ -17,10 +17,7 @@ html {
 }
 
 .containter {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 13vw;
-  margin-right: 13vw;
+  margin: 10vw;
   background-color: white;
   padding: 18px;
   box-shadow: 0 4px 8px gray;
@@ -29,7 +26,7 @@ html {
   justify-content: center;
   align-items: center;
   min-height: 200vh;
-  min-width: 80vh;
+  min-width: 80vw;
 }
 
 nav {
@@ -391,24 +388,24 @@ th {
 }
 
 @media (max-width: 625px) {
-  body {
-    width: 100vw;
-  }
+
 
   table {
-    width: 440px;
+    width: 350px;
   }
 
   .containter {
-    margin: 0;
-    width: 100vw;
+    margin: auto;
+    max-width: 370px;
   }
 
   #frm {
     width: 390px;
   }
 
-  #mainTable {}
+  #mainTable {
+    max-width: 360px;
+  }
 
   .welcome h1 {
     font-size: 30px;
@@ -429,7 +426,7 @@ th {
   th {
     padding: 9px 4px;
     font-size: 14px;
-    max-width: 390px;
+    max-width: 350px;
   }
 
   .welcome p::before {
@@ -442,10 +439,14 @@ th {
     right: -1.4%;
   }
 
+  #lawTable {
+    width: 350px;
+  }
+
   .welcome p {
     padding: 10px;
     font-size: 16px;
-    max-width: 800px;
+    max-width: 350px;
     border: 3px solid rgb(0, 221, 194);
   }
 }
