@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  background-color: rgba(0, 221, 195, 0.075);
+}
+
+.containter {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 13vw;
+  margin-right: 13vw;
+  background-color: white;
+  padding: 18px;
+  box-shadow: 0 4px 8px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200vh;
+  min-width: 80vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  max-width: 1200px;
+  padding-right: 35px;
+}
+
+.flag {
+  width: 250px;
+  height: 150px;
+}
+
+.links {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  font-size: 35px;
+  padding: 5px;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(0, 221, 194);
+}
+
+.links a:hover {
+  text-shadow: 1px 1px 16px rgba(0, 221, 195, 0.692);
+}
+
+.welcome {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome h1 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.welcome h5 {
+  margin: 12px;
+  font-size: 16px;
+  color: rgb(0, 221, 194);
+}
+
+.welcome p {
+  padding: 20px;
+  font-size: 18px;
+  max-width: 800px;
+  border: 4px solid rgb(0, 221, 194);
+  position: relative;
+}
+
+.welcome p::before,
+.welcome p::after {
+  content: " ";
+  position: absolute;
+  height: 60px;
+  width: 11px;
+  background: white;
+}
+
+.welcome p::before {
+  top: 0%;
+  left: -1%;
+}
+
+.welcome p::after {
+  bottom: 0%;
+  right: -1%;
+}
+
+.welcome a {
+  text-decoration: none;
+  color: rgb(0, 221, 194);
+}
+
+.welcome a:hover {
+  text-shadow: 1px 1px 16px rgba(0, 221, 195, 0.692);
+}
+
+.brakThis {
+  height: 3px;
+  border-radius: 3px;
+  width: 50vw;
+  align-self: center;
+  margin-top: 35px;
+  background-color: rgb(0, 221, 194);
+}
+
+#calcForm {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 10px;
+  min-height: 550px;
+}
+
+#calcForm h2 {
+  margin: 25px;
+}
+
+#frm {
+  margin-top: 25px;
+  display: flex;
+  width: 550px;
+  vertical-align: middle;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#frm div {
+  margin: 25px 0;
+  position: relative;
+}
+
+input {
+  border: 0;
+  border-bottom: 5px solid rgb(0, 221, 194);
+  padding: 7px;
+  font-size: 16px;
+  margin: 15px;
+  width: 135px;
+  transition: 1s;
+  border-radius: 10px 10px 0 0;
+}
+
+input:focus {
+  background-color: rgba(0, 221, 195, 0.075);
+}
+
+label {
+  position: absolute;
+  top: -17px;
+  left: 30%;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.submitIt {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 185px;
+  height: 65px;
+  background: none;
+  border: 4px solid rgb(0, 221, 194);
+  font-size: 22px;
+  color: rgb(0, 221, 194);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn::before,
+.btn::after {
+  content: " ";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: white;
+  transform: skewX(45deg);
+  transition: 0.6s;
+}
+
+.btn::before {
+  top: 0;
+  left: 35%;
+}
+
+.btn::after {
+  top: 94%;
+  left: 62%;
+}
+
+.btn:hover::before {
+  left: 60%;
+}
+
+.btn:hover::after {
+  left: 35%;
+}
+
+.btnPDF {
+  width: 185px;
+  margin-top: 30px;
+  height: 65px;
+  background: none;
+  border: 4px solid rgb(0, 221, 194);
+  font-size: 22px;
+  color: rgb(0, 221, 194);
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.btnPDF::before,
+.btnPDF::after {
+  content: " ";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: white;
+  transform: skewX(45deg);
+  transition: 0.6s;
+}
+
+.btnPDF::before {
+  top: -7%;
+  left: 15%;
+}
+
+.btnPDF::after {
+  top: 100%;
+  left: 80%;
+}
+
+.btnPDF:hover::before {
+  left: 80%;
+}
+
+.btnPDF:hover::after {
+  left: 10%;
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 600px;
+}
+
+thead {
+  background-color: rgb(0, 221, 194);
+}
+
+#mainTable tr:nth-child(even) {
+  background-color: rgba(0, 221, 195, 0.075);
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 14px 8px;
+  font-size: 18px;
+}
+
+.claims {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 630px;
+}
+
+.claims h2 {
+  margin-bottom: 18px;
+}
+.deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ntrCard {
+  position: relative;
+  max-width: 180px;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid rgba(180, 178, 178, 0.705);
+  box-shadow: 0 4px 6px gray;
+}
+
+.ntrCard h4 {
+  color: rgb(0, 221, 194);
+}
+
+.ntrCard::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: rgb(0, 221, 194);
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+#lawStuff {
+  margin: 28px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#lawStuff h2 {
+  margin: 8px;
+}
+
+#lawStuff h3 {
+  margin: 8px;
+  color: rgb(0, 221, 194);
+}
+
+@media (max-width: 1085px) {
+  .containter {
+    margin-left: 9vw;
+    margin-right: 9vw;
+  }
+
+  .links {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .links a {
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .links a img {
+    align-self: center;
+  }
+
+  .flag {
+    width: 162px;
+    height: 150px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 625px) {
+  .containter {
+    margin: 5px;
+  }
+  #mainTable {
+  }
+  .welcome h1 {
+    font-size: 30px;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  .links a {
+    font-size: 19px;
+    padding: 4px;
+    margin: 3px;
+    text-align: center;
+  }
+
+  .welcome p::before {
+    top: 0%;
+    left: -1.4%;
+  }
+
+  .welcome p::after {
+    bottom: 0%;
+    right: -1.4%;
+  }
+
+  .welcome p {
+    padding: 10px;
+    font-size: 16px;
+    max-width: 800px;
+    border: 3px solid rgb(0, 221, 194);
+  }
+}

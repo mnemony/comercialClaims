@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrution claims</title>
+    <link rel="stylesheet" href="./style/styles.css" />
+  </head>
+
+  <body>
+    <div class="containter">
+      <nav>
+        <a href="#"
+          ><img
+            class="flag"
+            src="./images/Flag_of_the_European_Union.svg"
+            alt="euClaim"
+        /></a>
+        <div class="links">
+          <a href="#calcForm">Validator</a>
+          <a href="">Law background</a>
+        </div>
+      </nav>
+      <div class="welcome">
+        <h1>EU food claims and RDI validator</h1>
+        <h5>
+          Check your products
+        </h5>
+        <p>
+          One of the main tasks facing the global food industry and grocery is
+          to meet social expectations by increasing the amount of food nutrition
+          information. Most companies in the European Union, including the trade
+          partners outside EU, already provide nutrition information on food
+          labels. This initiative goes beyond the requirements set out in legal
+          regulations and is getting mandatory. <br /><br />
+
+          Using our validator you can check what nutrition claims are available
+          for your product and check all RDI values for product label. All
+          calculations are based on EU nutrition and health claims made on food
+          regulations -
+          <a
+            href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32006R1924&from=PL"
+            >1924/2006</a
+          >
+          and
+          <a
+            href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32011R1169&from=pl"
+            >1169/2011</a
+          >.
+        </p>
+      </div>
+      <section id="calcForm">
+        <h2>Input values of your product in 100g (only for solids)</h2>
+        <form action="" id="frm">
+          <div>
+            <label for="carbsInput">Carbs (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="carbsInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="sugarsInput">Sugars (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="sugarsInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="fatsInput">Fats (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="fatsInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="satInput">Sat. Fats (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="satInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="proteinInput">Protein (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="proteinInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="fiberInput">Fiber (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="fiberInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="saltInput">Salt (g)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="saltInput"
+              min="0"
+              max="100"
+              value="0"
+              required
+            />
+          </div>
+          <div class="submitIt">
+            <button class="btn" type="submit">Calculate</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result">
+        <table id="mainTable">
+          <thead class="">
+            <tr>
+              <th scope="col">Nutrition values</th>
+              <th scope="col">in 100 g</th>
+              <th scope="col">RDI in 100 g</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Energy (kcal)</th>
+              <td id="tableKcal">0</td>
+              <td id="perKcal">0</td>
+            </tr>
+            <tr>
+              <th scope="row">Fat (Including sat. fatty acids)</th>
+              <td id="tableFat">0</td>
+              <td id="perFat">0</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturated fatty acids</th>
+              <td id="tableSat">0</td>
+              <td id="perSat">0</td>
+            </tr>
+            <tr>
+              <th scope="row">Carbs (including sugars)</th>
+              <td id="tableCarb">0</td>
+              <td id="perCarb">0</td>
+            </tr>
+            <tr>
+              <th scope="row">Sugars</th>
+              <td id="tableSug">0</td>
+              <td id="perSug">0</td>
+            </tr>
+            <tr>
+              <th scope="row">Portein</th>
+              <td id="tablePro">0</td>
+              <td id="perPro">0</td>
+            </tr>
+            <tr>
+              <th scope="row">Fibre</th>
+              <td id="tableFib">0</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Salt</th>
+              <td id="tableSalt">0</td>
+              <td id="perSalt">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="claims">
+          <h2>Claims available</h2>
+          <div class="deck">
+            <div class="ntrCard">
+              <h4>LOW ENERGY</h4>
+              <p>
+                A claim that a food is low in energy, and any claim likely to
+                have the same meaning for the consumer, may only be made where
+                the product does not contain more than 40 kcal (170 kJ)/100 g
+                for solids
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>ENERGY-FREE</h4>
+              <p>
+                A claim that a food is energy-free, and any claim likely to have
+                the same meaning for the consumer, may only be made where the
+                product does not contain more than 4 kcal (17 kJ)/100 ml. For
+                table-top sweeteners the limit of 0,4 kcal (1,7 kJ)/portion.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>LOW-FAT</h4>
+              <p>
+                A claim that a food is low in fat, and any claim likely to have
+                the same meaning for the consumer, may only be made where the
+                product contains no more than 3 g of fat per 100 g for solids.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>FAT-FREE</h4>
+              <p>
+                A claim that a food is fat-free, and any claim likely to have
+                the same meaning for the consumer, may only be made where the
+                product contains no more than 0,5 g of fat per 100 g or 100 ml.
+                However, claims expressed as 'X % fat-free' shall be prohibited.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>LOW SATURATED FAT</h4>
+              <p>
+                A claim that a food is low in saturated fat, and any claim
+                likely to have the same meaning for the consumer, may only be
+                made if the sum of saturated fatty acids and trans-fatty acids
+                in the product does not exceed 1,5 g per 100 g for solids.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>SATURATED FAT-FREE</h4>
+              <p>
+                A claim that a food does not contain saturated fat, and any
+                claim likely to have the same meaning for the consumer, may only
+                be made where the sum of saturated fat and trans-fatty acids
+                does not exceed 0,1 g of saturated fat per 100 g or 100 ml.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>LOW SUGARS</h4>
+              <p>
+                A claim that a food is low in sugars, and any claim likely to
+                have the same meaning for the consumer, may only be made where
+                the product contains no more than 5 g of sugars per 100 g for
+                solids or 2,5 g of sugars per 100 ml for liquids.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>SUGARS-FREE</h4>
+              <p>
+                A claim that a food is low in saturated fat, and any claim
+                likely to have the same meaning for the consumer, may only be
+                made if the sum of saturated fatty acids and trans-fatty acids
+                in the product does not exceed 1,5 g per 100 g for solids.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>LOW SODIUM/SALT</h4>
+              <p>
+                A claim that a food is low in sodium/salt, and any claim likely
+                to have the same meaning for the consumer, may only be made
+                where the product contains no more than 0,12 g of sodium, or the
+                equivalent value for salt, per 100 g or per 100 ml.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>VERY LOW SODIUM/SALT</h4>
+              <p>
+                A claim that a food is very low in sodium/salt, and any claim
+                likely to have the same meaning for the consumer, may only be
+                made where the product contains no more than 0,04 g of sodium,
+                or the equivalent value for salt, per 100 g or per 100 ml.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>SODIUM-FREE or SALT-FREE</h4>
+              <p>
+                A claim that a food is sodium-free or salt-free, and any claim
+                likely to have the same meaning for the consumer, may only be
+                made where the product contains no more than 0,005 g of sodium,
+                or the equivalent value for salt, per 100 g.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>SOURCE OF FIBRE</h4>
+              <p>
+                A claim that a food is a source of fibre, and any claim likely
+                to have the same meaning for the consumer, may only be made
+                where the product contains at least 3 g of fibre per 100 g or at
+                least 1,5 g of fibre per 100 kcal.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>HIGH FIBRE</h4>
+              <p>
+                A claim that a food is high in fibre, and any claim likely to
+                have the same meaning for the consumer, may only be made where
+                the product contains at least 6 g of fibre per 100 g or at least
+                3 g of fibre per 100 kcal.
+              </p>
+            </div>
+            <div class="ntrCard">
+              <h4>SOURCE OF PROTEIN</h4>
+              <p>
+                A claim that a food is a source of protein, and any claim likely
+                to have the same meaning for the consumer, may only be made
+                where at least 12% of the energy value of the food is provided
+                by protein.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <button class="btnPDF" onclick="generatePDF()">Download Report</button>
+      <div id="lawStuff">
+        <h2>Law background</h2>
+        <h3>All permitted food claims in EU</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <h4>LOW ENERGY</h4>
+                <p>
+                  A claim that a food is low in energy, and any claim likely to
+                  have the same meaning for the consumer, may only be made where
+                  the product does not contain more than 40 kcal (170 kJ)/100 g
+                  for solids or more than 20 kcal (80 kJ)/100 ml for liquids.
+                  For table-top sweeteners the limit of 4 kcal (17 kJ)/portion,
+                  with equivalent sweetening properties to 6 g of sucrose
+                  (approximately 1 teaspoon of sucrose), applies.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h4>LOW ENERGY</h4>
+                <p>
+                  A claim that a food is low in energy, and any claim likely to
+                  have the same meaning for the consumer, may only be made where
+                  the product does not contain more than 40 kcal (170 kJ)/100 g
+                  for solids or more than 20 kcal (80 kJ)/100 ml for liquids.
+                  For table-top sweeteners the limit of 4 kcal (17 kJ)/portion,
+                  with equivalent sweetening properties to 6 g of sucrose
+                  (approximately 1 teaspoon of sucrose), applies.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/html2pdf.bundle.min.js"></script>
+    <script src="./js/pdfcreator.js"></script>
+  </body>
+</html>
