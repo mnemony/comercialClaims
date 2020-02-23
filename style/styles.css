@@ -14,10 +14,12 @@ html {
   background-color: rgba(0, 221, 195, 0.075);
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
+
 }
 
 .containter {
-  margin: 10vw;
+  margin: 5vw;
   background-color: white;
   padding: 18px;
   box-shadow: 0 4px 8px gray;
@@ -196,7 +198,7 @@ label {
   content: " ";
   position: absolute;
   width: 14px;
-  height: 4px;
+  height: 6px;
   background: white;
   transform: skewX(45deg);
   transition: 0.6s;
@@ -238,7 +240,7 @@ label {
   content: " ";
   position: absolute;
   width: 14px;
-  height: 4px;
+  height: 6px;
   background: white;
   transform: skewX(45deg);
   transition: 0.6s;
@@ -250,7 +252,7 @@ label {
 }
 
 .btnPDF::after {
-  top: 100%;
+  top: 99%;
   left: 80%;
 }
 
@@ -260,6 +262,14 @@ label {
 
 .btnPDF:hover::after {
   left: 10%;
+}
+
+.error {
+  border: 3px solid red;
+  border-radius: 5px;
+  margin: 30px;
+  padding: 11px;
+  color: red;
 }
 
 #result {
